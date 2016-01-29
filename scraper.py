@@ -23,7 +23,7 @@ def connect(url):
         connect(url)
     else:
         return report_soup
-
+st_time = str(datetime.now())
 directoryUrl = "http://www.cqc.org.uk/content/how-get-and-re-use-cqc-information-and-data#directory"
 # html = urllib2.urlopen(directoryUrl)
 # soup = BeautifulSoup(html)
@@ -53,6 +53,6 @@ for row in csv_file:
     print name
     todays_date = str(datetime.now())           
     scraperwiki.sqlite.save(unique_keys=['d'], data={"d": todays_date, "name": unicode(name), "val": unicode(report_date)})
-    end_time = str(datetime.now())
-    print st_time
-    print end_time
+end_time = str(datetime.now())
+print st_time
+print end_time
